@@ -14,3 +14,10 @@ CREATE TABLE books(
 	year INT,
 	available BOOLEAN DEFAULT TRUE
 );
+
+CREATE TABLE patrons(
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(100) NOT NULL,
+	email VARCHAR(100) UNIQUE,
+	borrowed_books INT[]
+);
